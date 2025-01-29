@@ -1,0 +1,23 @@
+{
+  "name": "newapp-1",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "setup": "evershop install",
+    "start": "evershop start",
+    "build": "evershop build",
+    "start:debug": "evershop start --debug",
+    "dev": "evershop dev",
+    "user:create": "evershop user:create",
+    "user:changePassword": "evershop user:changePassword"
+  
+   
+},
+  "dependencies": {
+    "@evershop/evershop": "^1.2.2"
+  },
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
