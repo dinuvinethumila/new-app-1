@@ -5,7 +5,7 @@
   "scripts": {
     "setup": "evershop install",
     "start": "evershop start",
-    "build": "evershop build",
+    "build": "npx evershop build && mv .evershop/build build",
     "start:debug": "evershop start --debug",
     "dev": "evershop dev",
     "user:create": "evershop user:create",
