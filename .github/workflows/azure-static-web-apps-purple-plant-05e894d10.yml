@@ -34,7 +34,11 @@ jobs:
         run: chmod +x ./node_modules/.bin/evershop || true
 
       - name: Build Application
-        run: npx evershop build
+      run: |
+      npx evershop build
+      mkdir -p build
+      cp -r .evershop/build/* build/
+
 
       - name: Build And Deploy
         id: builddeploy
