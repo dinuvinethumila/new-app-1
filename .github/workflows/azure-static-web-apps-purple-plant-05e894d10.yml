@@ -47,7 +47,7 @@ jobs:
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
         with:
-          app_location: "build"  # This should point to the compiled React output
+          app_location: "/"  # This should point to the compiled React output
           api_location: ""  # API source code path - optional
           output_location: "build"  # This should match the folder where the React app is built
           ###### End of Repository/Build Configurations ######
