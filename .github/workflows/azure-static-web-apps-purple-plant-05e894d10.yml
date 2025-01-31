@@ -34,8 +34,7 @@ jobs:
         run: chmod +x ./node_modules/.bin/evershop || true
 
       - name: Build Application
-      run :  build
-
+        run: npm run build
 
       - name: Build And Deploy
         id: builddeploy
@@ -44,13 +43,9 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_PURPLE_PLANT_05E894D10 }}
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for GitHub integrations (i.e., PR comments)
           action: "upload"
-          ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
-          # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-        with:
-          app_location: "/"  # This should point to the compiled React output
+          app_location: "build"  # Correct folder where the compiled React app is located
           api_location: ""  # API source code path - optional
           output_location: "build"  # This should match the folder where the React app is built
-          ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
